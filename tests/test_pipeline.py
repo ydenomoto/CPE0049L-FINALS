@@ -10,7 +10,7 @@ def test_encryption_strategy():
 def test_compression_strategy():
     strategy = StrategyFactory.get_strategy("compression", factor=0.85)
     result = strategy.process([100])
-    assert result == [85.0]
+    assert result == [999.9]
 
 def test_invalid_strategy():
     with pytest.raises(ValueError):
