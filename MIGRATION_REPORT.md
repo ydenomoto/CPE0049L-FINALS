@@ -20,18 +20,21 @@ The system has been completely decoupled into independent, pluggable service mod
 
 ## 3. JWT Cryptographic Handshake Workflow
 To establish supply-chain security integrity, a stateless JSON Web Token (JWT) system validates transactional requests:
+
+```text
 [ Client App ]                              [ Auth Service ]
-|                                            |
-| ----- 1. POST /auth (Credentials) -------> |
-|                                            | [ Validates Identity ]
-|                                            | [ Encodes Headers/Claims ]
-|                                            | [ Signs with Crypto Private Key ]
-| <---- 2. Returns Signed Bearer Token ------|
-|                                            |
-| ----- 3. Request + JWT in Header --------> |
-|                                            | [ Verifies Signature Hash ]
-| <---- 4. Processes Request Stream ---------|
-### Manual Verification of AI Output
-### Manual Verification of AI Output
-- **AI Recommendation:** The model originally attempted to use legacy local library arrays for bitwise shifts.
-- **Manual Engineering Action:** Overrode the initialization block to explicitly accept proper standard hex validation strings (`int(self.key, 16)`) ensuring mathematical consistency with key parameter `004F`.
+      |                                            |
+      | ----- 1. POST /auth (Credentials) -------> |
+      |                                            | [ Validates Identity ]
+      |                                            | [ Encodes Headers/Claims ]
+      |                                            | [ Signs with Crypto Private Key ]
+      | <---- 2. Returns Signed Bearer Token ------|
+      |                                            |
+      | ----- 3. Request + JWT in Header --------> |
+      |                                            | [ Verifies Signature Hash ]
+      | <---- 4. Processes Request Stream ---------|
+Manual Verification of AI Output
+
+    AI Recommendation: The model originally attempted to use legacy local library arrays for bitwise shifts.
+
+    Manual Engineering Action: Overrode the initialization block to explicitly accept proper standard hex validation strings (int(self.key, 16)) ensuring mathematical consistency with key parameter 004F.
